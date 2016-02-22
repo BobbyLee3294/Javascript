@@ -1,6 +1,6 @@
 // JavaScript source code
 
-//defining a object and its properties
+//defining a object
 var objectName = new Object();
 //the object constructor by default has no methods or properties unless added afterward
 objectName.propertyName = "property";
