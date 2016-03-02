@@ -22,10 +22,30 @@ for (i = 0; i < family.length; i++) {
 var ageDifference = function (person1, person2) {
     return person1.age - person1.age;
 }
-var alice = new Person("Alice", 30);
-var billy = new Person("Billy", 25);
+var alice = family[0];
+var timmy = family[3];
 
 //we will use the function to find the difference in age between the alice and billy
 //this function will only work if the object has an age property
-var diff = ageDifference(alice, billy);
+var diff = ageDifference(alice, timmy);
 console.log(diff);
+//typeof operator will return a string that will tell you the "type of" operand that it is evaluating
+//Protip: operands are expressions representing the object or primitive whose type is to be returned
+//Protip II: primitives are data that are not objects and have no methods; JS has 6: string,number,boolean,null,undefined,symbol
+console.log(typeof family); //should print "array"
+console.log(typeof family[0]) //should print "object"
+console.log(typeof family[0].age) //should print "number"
+console.log(typeof family[0].name) //should print "string"
+//hasOwnProperty() method is use to determine whether the object has the specified property
+//will return a boolean
+family.hasOwnProperty("age"); //should return true
+family.hasOwnProperty("address"); //should return false
+//a for/in loop can be used to work with the properties in an object
+for (var prop in family) {
+    console.log(prop);
+};
+//for/in loops can be used to get the values as well
+//REMEMBER THE BRACKET NOTATION
+for (var value in family) {
+    console.log(value);
+}
